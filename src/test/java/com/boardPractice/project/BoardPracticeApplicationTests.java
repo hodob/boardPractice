@@ -17,30 +17,9 @@ class BoardPracticeApplicationTests {
 	private BoardService boardService;
 	
 	
-	@Test
-	void save() {
-		BoardRequestDto boardSaveDto = new BoardRequestDto();
-		
-		boardSaveDto.setTitle("제목입니다.");
-		boardSaveDto.setContent("내용입니다.");
-		boardSaveDto.setRegisterId("작성자");
-		
-		Long result = boardService.save(boardSaveDto);
-		
-		if(result > 0) {
-			System.out.println("# Success save() ~");
-			findAll();
-		}
-	}
-	void findAll() {
-		List<BoardResponseDto> list = boardService.findAll();
-		
-		if(list !=null) {
-			System.out.println("# Success findById()" + list.toString());
-		} else {
-			System.out.println("# Fail findAll() ~");
-		}
-	}
+	
+
+	
 	 void findById(Long id) {
 		 BoardResponseDto info = boardService.findById(id);
 		 
